@@ -1,0 +1,177 @@
+<title> 스몰 마이 프렌즈 </title>
+<head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+    form fieldset {
+        font-family: 'Nanum Gothic', sans-serif;
+        margin: 10px 0px;
+    }
+
+    form legend {
+        font-size: 30px;
+        color: #000000;
+        font-weight: 800;
+    }
+
+    form label.reg {
+        font-size: 14px;
+        width: 100px;
+        float: left;
+    }
+
+    form label em {
+        font-size: 15px;
+        color: red;
+        font-weight: 800;
+    }
+
+    form ul li {
+        display: table;
+        list-style: none;
+        margin: 30px 0px;
+        float:center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    form fieldset.sendform {
+        text-align: center;
+    }
+
+    a {
+  text-decoration:none;  /* 텍스트 링크 밑줄 없애기 */ 
+   }
+ /*********************************/
+/* 헤더 영역 - 로고와 내비게이션 */
+/*********************************/
+
+header{
+  width:100%;    /*  너비 */
+  height:100px;   /* 높이 */ 
+  background-color:rgb(255, 255, 255);  
+}
+
+/* 로고 */
+#logo{ 
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  float:left;   /* 왼쪽으로 플로팅 */ 
+  width:130px;   /*  너비 */ 
+  height:100px;   /* 높이 */
+  line-height:50px;  /* 세로로 중간에 맞춤 - 줄간격을 높이 값과 같게 */
+  padding-left:20px;  /* 왼쪽에 여백 */
+}
+#logo h1 {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight:800;
+  font-size:40px;   /* 글자 크기 */
+  color:rgb(0, 0, 0);   /* 글자 색*/
+  text-shadow:0 -1px 0 #222;  /* 그림자 색 */
+}
+
+/* 내비게이션 */
+nav{  
+  font-family: 'Nanum Gothic', sans-serif;
+  width:800px;   /*   너비 */  
+  height:50px;   /* 메뉴 영역 높이 */  
+  padding-top:25px;  /* 메뉴를 아래로 내리기 위해 */  
+}
+#topMenu {  
+  display: flex;
+  list-style-type: none;
+  height:50px; 
+}
+#topMenu > li {
+  float:left;  /* 메뉴 항목을 왼쪽으로 플로팅 */ 
+  position: relative;  
+  width: 130px;
+}
+#topMenu > li > a{
+  font-size:1.1em;
+  color:rgb(0, 0, 0);   /* 글자 색*/
+  font-weight:600;  /* 글자 굵기 */
+  padding:20px 30px;  /* 패딩 */ 
+}
+#topMenu > li > a:hover {
+  color:#1fa8f8;
+  text-shadow:0 -2px #222;
+}
+#toplogin {  
+  display: flex;
+  list-style-type: none;
+  height:50px; 
+}
+#toplogin > li {
+  float:right;  /* 메뉴 항목을 왼쪽으로 플로팅 */ 
+  text-align: right;
+  position: relative;
+  top:-65px;
+  left: 1000px; 
+}
+#toplogin > li > a{
+  font-size:0.8em;
+  color:rgb(0, 0, 0);   /* 글자 색*/
+  font-weight:400;  /* 글자 굵기 */
+  padding:20px 30px;  /* 패딩 */ 
+}
+#toplogin > li > a:hover {
+  color:#1fa8f8;
+  text-shadow:0 -2px #222;
+}
+</style>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <div id="logo">
+        <a href="#">
+          <h1>스마프</h1>
+        </a>
+      </div>
+      <nav>
+        <ul id="topMenu">
+          <li><a href="#">커뮤니티</a></li>
+          <li><a href="#">동물병원</a></li>
+          <li><a href="#">정보</a></li>
+        </ul>
+        <ul id="toplogin">
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+          <li><a href="#">마이페이지</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- 주소에 줄줄이 붙어보내면 get / 값만 모내면 post -->
+    <form action="2_process.jsp" method="post" >
+    <fieldset>
+        <legend> 회원가입 </legend>
+        <ul>
+            <!-- em : 진하게, 강조 -->
+            <!-- id : lable의 for랑 연결된 부분 / name은 다른 파일로 넘겨줄 파라미터 명 -->
+            <li> <label class="reg" for="new_id"> 아이디 <em> * </em> </label>
+                <input type="text" id="new_id" name="new_id" size="20" autocomplete="on" required>
+            </li>
+            <li> <label class="reg" for="new_pw1"> 비밀번호 <em> * </em> </label>
+                <input type="password" id="new_pw1" name="new_pw1" size="20" required>
+            </li>
+            <li> <label class="reg" for="new_pw2"> 비밀번호 확인 <em> * </em> </label>
+                <input type="password" id="new_pw2" name="new_pw2" size="20" required>
+            </li>
+            <li> <label class="reg" for="user_name"> 닉네임 <em> * </em> </label>
+                <input type="text" id="user_name" name="user_name" size="20" required>
+            </li>
+            <li> <label class="reg" for="user_mail"> 메일주소 <em> * </em> </label>
+                <input type="email" id="user_mail" name="user_mail" size="20" required>
+            </li>
+        </ul>
+    </fieldset>
+
+    <fieldset class="sendform">
+        <input type="submit" value="가입하기">
+        <input type="submit" value="취소">
+
+    </fieldset>
+  </div>
+</body>
+</html>
