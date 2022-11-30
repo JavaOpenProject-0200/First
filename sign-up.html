@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>회원가입</title>
   <link rel="stylesheet" href="sign-up.css">
+  <script src="sign-up.js"></script>
 </head>
 <body>
   <div style="position: absolute; left:0; width: 1440px; height: 1024px">
@@ -31,27 +32,23 @@
       <p>회원가입</p>
       <div class="signup_enter">
         <div class="signup-id">
-          <input type="id" name="" id="" placeholder="아이디" />
+          <input type="id" name="" id="id" placeholder="아이디" />
         </div>
         <div class="signup-pw">
-          <input type="password" name="" id="" placeholder="비밀번호" />
+          <input type="password" name="" id="pw" placeholder="비밀번호" />
         </div>
         <div class="check-pw">
-          <input type="password" name="" id="" placeholder="비밀번호 확인" />
+          <input type="password" name="" id="r_pw" placeholder="비밀번호 확인" />
         </div>
         <div class="signup-name">
-          <input type="text" name="" id="" placeholder="닉네임" />
+          <input type="text" name="" id="nick_name" placeholder="닉네임" />
         </div>
         <div class="signup-email">
-          <input type="email" name="" id="" placeholder="확인용 이메일" />
+          <input type="email" name="" id="email" placeholder="확인용 이메일" />
         </div>
         <div class="login-check">
           <div class="button_container">
-            <button class="btn"><span>SIGN UP</span></button>
-            <!--<p class="link">
-              Design by 
-              <a href="https://dribbble.com/skytrip" target="_blank">SkyTrip</a>
-            </p>-->
+            <button class="btn" onclick="create_id();"><span>SIGN UP</span></button>
           </div>
       </div>
       </div>
