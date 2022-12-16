@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAYD</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="mapsstyle.css" />
+    <script defer src="mapsjsp.js"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFz2DWODHtEAeal7zwh8wQbFH8mNeKNqc&region=kr&callback=initMap"></script>
+  </head>
+  <body>
+    <div class="menu">
+      <label for="expand-menu"><div>menu</div></label><input type="checkbox" id="expand-menu" name="expand-menu" />
+      <ul>
+        <li>
+          <a href="information.html" class="item"><div>home</div></a>
+        </li>
+        <li>
+          <a href="#" class="item"><div>bookmark</div></a>
+        </li>
+        <li>
+          <a href="#" class="item"><div>review</div></a>
+        </li>
+        <li>
+          <a href="#" class="item"><div>ranking</div></a>
+        </li>
+        <li>
+          <a href="#" class="item"><div>logout</div></a>
+        </li>
+      </ul>
+    </div>
+    <div id="map"></div>
+  </body>
+</html>

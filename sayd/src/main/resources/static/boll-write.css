@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+  font-family: 'Fredoka One', cursive;
+}
+
+.menu {
+  height: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.menu h1 {
+  font-size: 33px;
+  display: inline;
+  float: left;
+  margin-top: 55px;
+  margin-left: 52px;
+}
+
+.menu .logo{
+  text-decoration:none;  /* 텍스트 링크 밑줄 없애기 */ 
+  color:#000;
+}
+
+/* 상단메뉴 */
+#topmenu {
+  height: 30px;
+}
+
+#topmenu ul li {
+  list-style: none;
+  float: left;
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  margin-right: 35px;
+}
+
+#topmenu .menuLink {
+  text-decoration: none;
+  font-size: 25px;
+  width: 111;
+  color: black;
+}
+
+#topmenu > li > a:hover{
+  color: rgb(0, 0, 0);
+  text-shadow:0 -2px #222;
+}
+
+#loginmenu {
+  height: 18px;
+  width: 180px;
+  margin-left: 713px;
+}
+
+#loginmenu ul li {
+  list-style: none;
+  float: left;
+  line-height: 18px;
+  vertical-align: middle;
+  text-align: center;
+  margin-right: 10px;
+}
+
+#loginmenu p {
+  float: left;
+  margin-top: -0.1px;
+  margin-right: 0px;
+}
+
+#loginmenu .loginLink {
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.login-wrap {
+  clear: left;
+  padding-top: 64px;
+}
+
+.login-wrap p {
+  font-size: 25px;
+  width: 1241.5px;
+  margin-left: 95px;
+  padding-bottom: 15.5px;
+  border-bottom: 1px solid black;
+}
